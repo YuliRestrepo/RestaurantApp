@@ -6,6 +6,9 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MessageComponent } from './message/message.component';
 import { SettingsComponent } from './settings/settings.component';
+import { MenuComponent } from '../subcomponents/menu/menu.component';
+import { MaterialModule } from '../material/material.module';
+import { SubcomponentsModule } from '../subcomponents/subcomponents.module';
 
 
 @NgModule({
@@ -17,7 +20,9 @@ import { SettingsComponent } from './settings/settings.component';
   ],
   imports: [
     CommonModule,
-    ComponentsRoutingModule
+    ComponentsRoutingModule,
+    MaterialModule,
+    SubcomponentsModule
   ],
   exports: [
     HomeComponent,

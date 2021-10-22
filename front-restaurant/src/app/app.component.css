@@ -1,18 +1,11 @@
-  .main {
-    display: flex;
-    flex-wrap: nowrap;
-    height: 100vh;
-    height: -webkit-fill-available;
-    max-height: 100vh;
-    overflow-x: auto;
-    overflow-y: hidden;
-    flex-shrink: 0;
-  }
-  
-  .content {
-    width: 100%;
-    height: 100vh;
-  }
+mat-drawer-container{
+  height: 100%;
+}
 
-  
+mat-drawer{
+  height: 100%;
+}
 
+.logout{
+  justify-content: flex-end;
+}

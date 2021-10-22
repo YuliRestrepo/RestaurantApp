@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  
+  today: number = Date.now();
+  categories = ['Platos frios', 'Platos calientes', 'Postres'];
+  
   constructor() { }
+
 
   ngOnInit(): void {
   }
