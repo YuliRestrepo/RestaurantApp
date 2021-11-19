@@ -1,1 +1,43 @@
-<router-outlet></router-outlet>
+<mat-sidenav-container fullscreen>
+    <mat-sidenav #start [mode]="'over'" fixedInViewport="true">
+      <div class="content-sinav" fxLayout="row" fxLayoutAlign="space-between">
+        <div fxLayout="column">
+          <h1 class="name-title">Restaurant App</h1>
+          <mat-divider></mat-divider>
+          <div class="row">
+            <a [routerLink]="['home']"><button mat-button>
+              <mat-icon>home</mat-icon> Menú
+            </button></a>
+          </div>
+          <div class="row">
+            <a routerLink="/favorites"><button mat-button>
+              <mat-icon>favorite</mat-icon> Mis favoritos
+            </button></a>
+          </div>
+          <div class="row">
+            <a routerLink="/reservations"><button mat-button>
+              <mat-icon>mail</mat-icon> Reservaciones
+            </button></a>
+          </div>
+          <div class="row">
+            <a routerLink="/settings"><button mat-button>
+              <mat-icon>settings</mat-icon> Mi carrito
+            </button></a>
+          </div>
+        </div>
+        <div fxLayout="column">
+          <button mat-button>
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar>
+        <button mat-icon-button (click)="start.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

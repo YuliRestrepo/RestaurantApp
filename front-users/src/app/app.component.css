@@ -1,0 +1,33 @@
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+    height: 100% !important;
+}
+
+mat-sidenav{
+    width: 250px;
+    padding: 20px;
+}
+
+.content-sinav{
+    max-width: max-content;
+}
+
+a{
+    padding: 0px;
+}
+
+.mat-button{
+    width: 190px;
+    text-align: start;
+}
+
+.row{
+    margin-top: 10px;
+}
+
+h1{
+    margin-top: 80px;
+}
+
+mat-divider{
+    width: auto;
+}
