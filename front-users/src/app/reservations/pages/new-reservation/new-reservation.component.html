@@ -21,7 +21,7 @@
   </mat-step>
   <mat-step [stepControl]="secondFormGroup" label="Selecciona plato">
     <form [formGroup]="secondFormGroup">
-      <app-mini-card></app-mini-card>
+      <app-mini-card [id]="id"></app-mini-card>
       <div class="button-two">
         <button mat-button routerLink="/reservations/new-reservation/more-dish">Elegir más platos</button>
         <button mat-button matStepperPrevious>Anterior</button>
@@ -31,7 +31,9 @@
   </mat-step>
   <mat-step [stepControl]="thirdFormGroup" label="Selecciona mesa">
     <form [formGroup]="thirdFormGroup">
-      <app-mini-card-table></app-mini-card-table>
+      <mat-selection-list #shoes [multiple]="false">
+        <app-mini-card-table [table]="4" [num]="4"></app-mini-card-table>
+      </mat-selection-list>
       <div class="button-two">
         <button mat-button routerLink="/reservations/new-reservation/more-table">Elegir otra mesa</button>
         <button mat-button matStepperPrevious>Anterior</button>
@@ -44,7 +46,7 @@
     <p>Presiona enviar para realizar tu reservación.</p>
     <div>
       <button mat-button matStepperPrevious>Anterior</button>
-      <button mat-button>Enviar</button>
+      <button mat-button (click)="openDialog()">Enviar</button>
     </div>
   </mat-step>
 </mat-stepper>

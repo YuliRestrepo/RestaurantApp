@@ -1,9 +1,15 @@
 <div class="select-table">
     <h1>Selecciona mesa</h1>
-
+    <div *ngFor="let table of tables">
+        <!-- {{table.table}} -->
+        <app-mini-card-table [table]="table.table" [num]="table.num"></app-mini-card-table>
+    </div>
     <div class="back-table">
         <div class="button-back">
-            <button mat-raised-button color="primary" routerLink="/reservations/new-reservation">Volver</button>
+            <button mat-raised-button color="primary" routerLink="/reservations/new-reservation">Cancelar</button>
+        </div>
+        <div class="button-save">
+            <button mat-raised-button color="primary" routerLink="/reservations/new-reservation">Guardar cambios</button>
         </div>
     </div>
 </div>

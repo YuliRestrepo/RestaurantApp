@@ -7,6 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectTableComponent implements OnInit {
 
+  tables = [
+    {
+      table: 4,
+      num: 4
+    },
+    {
+      table: 5,
+      num: 6
+    }
+  ] as any;
+
   constructor() { }
 
   ngOnInit(): void {

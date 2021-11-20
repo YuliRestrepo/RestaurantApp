@@ -11,6 +11,7 @@ import { SelectTableComponent } from './pages/select-table/select-table.componen
 import { MiniCardComponent } from './components/mini-card/mini-card.component';
 import { DetailReservationComponent } from './pages/detail-reservation/detail-reservation.component';
 import { MiniCardTableComponent } from './components/mini-card-table/mini-card-table.component';
+import { DialogConfirmReservationComponent } from './components/dialog-confirm-reservation/dialog-confirm-reservation.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MiniCardTableComponent } from './components/mini-card-table/mini-card-t
     SelectTableComponent,
     MiniCardComponent,
     DetailReservationComponent,
-    MiniCardTableComponent
+    MiniCardTableComponent,
+    DialogConfirmReservationComponent
   ],
   imports: [
     CommonModule,
