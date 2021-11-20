@@ -17,4 +17,8 @@ export class DataService {
   public getJSONFavorites(): Observable<any>{
     return this.http.get("./assets/favorites.json");
   }
+
+  public getJSONReservations(): Observable<any>{
+    return this.http.get("./assets/reservations.json");
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-reservations',
@@ -7,46 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReservationsComponent implements OnInit {
 
-  reservations = [
-    {
-      id: '1',
-      date: '12/10/2021',
-      foods: [
-        {
-          name: 'nombre comida',
-          rate: '20000',
-          amount: '3'
-        },
-        {
-          name: 'nombre comida 2',
-          rate: '40000',
-          amount: '1'
-        }
-      ],
-      table: '4'
-    },
-    {
-      id: '2',
-      date: '30/10/2021',
-      foods: [
-        {
-          name: 'nombre comida',
-          rate: '20000',
-          amount: '3'
-        },
-        {
-          name: 'nombre comida 2',
-          rate: '40000',
-          amount: '1'
-        }
-      ],
-      table: '2'
-    }
-  ]
+  reservations = [] as any;
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.dataService.getJSONReservations().subscribe(data => {
+      this.reservations = data;
+    })
   }
 
 }

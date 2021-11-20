@@ -14,7 +14,8 @@
                                     <p> {{ reservation.date }} </p>
                                 </div>
                                 <div class="col">
-                                    <button mat-button routerLink="/reservations/detail-reservation">Ver detalle</button>
+                                    <button mat-button [routerLink]="['/reservations/detail-reservation', {id: reservation.id, date: reservation.date, table: reservation.table}]"
+                                    >Ver detalle</button>
                                 </div>
                             </div>
                         </div>

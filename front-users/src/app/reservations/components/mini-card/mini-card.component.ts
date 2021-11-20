@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-mini-card',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MiniCardComponent implements OnInit {
 
-  constructor() { }
+  @Input() id: any;
+  reservations = [] as any;
+  reserva = [] as any;
+
+  constructor(private dataService: DataService) { 
+  }
 
   ngOnInit(): void {
+    this.dataService.getJSONReservations().subscribe(data => {
+      this.reservations = data;
+      console.log(this.reservations);
+      for (let reserva in this.reservations){
+        if (this.reservations[reserva].id == this.id){
+          this.reserva=this.reservations[reserva].foods;
+        }
+      }
+    })
   }
 
 }

@@ -1,14 +1,21 @@
-<mat-card>
-    <mat-card-content>
-        <div class="row">
-            <div class="col-4">
-                <img src="https://s1.eestatic.com/2019/03/04/ciencia/nutricion/nutricion_380722770_117009518_854x640.jpg">
-            </div>
-            <div class="col">
-                <p> Nombre </p>
-                <p> $ 14.000 </p>
-                <p> Cantidad: 2</p>
-            </div>
+<div>
+    <div class="row">
+        <div class="col">
+            <mat-card *ngFor="let reser of reserva">
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="{{reser.img}}">
+                        </div>
+                        <div class="col">
+                            <p> {{reser.name}} </p>
+                            <p> {{reser.type | titlecase}} </p>
+                            <p> {{reser.price}} </p>
+                            <!-- <p> Cantidad: 2</p> -->
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
         </div>
-    </mat-card-content>
-</mat-card>
+    </div>
+</div>
