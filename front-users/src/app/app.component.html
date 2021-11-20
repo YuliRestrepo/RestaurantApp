@@ -3,32 +3,34 @@
       <div class="content-sinav" fxLayout="row" fxLayoutAlign="space-between">
         <div fxLayout="column">
           <h1 class="name-title">Restaurant App</h1>
-          <mat-divider></mat-divider>
           <div class="row">
-            <a [routerLink]="['home']"><button mat-button>
-              <mat-icon>home</mat-icon> Menú
+            <a routerLink="/home"><button mat-button>
+              <mat-icon><span class="material-icons-outlined">
+                store
+                </span></mat-icon> Menú
             </button></a>
           </div>
           <div class="row">
             <a routerLink="/favorites"><button mat-button>
-              <mat-icon>favorite</mat-icon> Mis favoritos
+              <mat-icon><span class="material-icons-outlined">
+                favorite_border
+                </span></mat-icon> Mis favoritos
             </button></a>
           </div>
           <div class="row">
             <a routerLink="/reservations"><button mat-button>
-              <mat-icon>mail</mat-icon> Reservaciones
+              <mat-icon><span class="material-icons-outlined">
+                today
+                </span></mat-icon> Reservaciones
             </button></a>
           </div>
           <div class="row">
-            <a routerLink="/settings"><button mat-button>
-              <mat-icon>settings</mat-icon> Mi carrito
+            <a routerLink="/login"><button mat-button>
+              <mat-icon><span class="material-icons-outlined">
+                login
+                </span></mat-icon> Iniciar sesión
             </button></a>
           </div>
-        </div>
-        <div fxLayout="column">
-          <button mat-button>
-            <mat-icon>favorite</mat-icon>
-          </button>
         </div>
       </div>
     </mat-sidenav>

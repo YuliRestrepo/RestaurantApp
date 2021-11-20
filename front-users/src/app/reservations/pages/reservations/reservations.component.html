@@ -1,0 +1,32 @@
+<div class="content">
+    <h1>Mis reservaciones</h1>
+    <div class="row">
+        <div class="card-reservation col-xs-12 col-sm-12 col-md-12 col-lg-4" *ngFor="let reservation of reservations">
+            <mat-card>
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col info-favorite">
+                            <div class="row number-date">
+                                <div class="col-2">
+                                    <button mat-mini-fab>{{ reservation.id }}</button>
+                                </div>
+                                <div class="col">
+                                    <p> {{ reservation.date }} </p>
+                                </div>
+                                <div class="col">
+                                    <button mat-button routerLink="/reservations/detail-reservation">Ver detalle</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+    <div class="add-reservation">
+        <div class="button-add">
+            <button mat-raised-button color="primary" routerLink="/reservations/new-reservation">Añadir
+                reservación</button>
+        </div>
+    </div>
+</div>

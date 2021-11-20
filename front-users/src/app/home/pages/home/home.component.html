@@ -1,0 +1,17 @@
+<div class="content">
+    <h1>Restaurant App</h1>
+    <mat-form-field>
+        <mat-label>Buscar</mat-label>
+        <input matInput>
+    </mat-form-field>
+    <mat-tab-group mat-align-tabs="start">
+        <mat-tab label={{tab}} *ngFor="let tab of categories">
+            <div class="content-tab">
+                <h2>{{ tab | titlecase }}</h2>
+                <div class="menu">
+                    <app-menu-home [type]="tab"></app-menu-home>
+                </div>
+            </div>
+        </mat-tab>
+      </mat-tab-group>   
+</div>
