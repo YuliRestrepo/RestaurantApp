@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-favorites',
@@ -7,27 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoritesComponent implements OnInit {
 
-  favorites = [
-    {
-      img: "https://s1.eestatic.com/2019/03/04/ciencia/nutricion/nutricion_380722770_117009518_854x640.jpg",
-      name: 'Plato 1',
-      rate: '10.000'
-    },
-    {
-      img: "https://s1.eestatic.com/2019/03/04/ciencia/nutricion/nutricion_380722770_117009518_854x640.jpg",
-      name: 'Plato 2',
-      rate: '20.000'
-    },
-    {
-      img: "https://s1.eestatic.com/2019/03/04/ciencia/nutricion/nutricion_380722770_117009518_854x640.jpg",
-      name: 'Plato 4',
-      rate: '40.000'
-    }
-  ]
+  favorites: any;
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.dataService.getJSONFavorites().subscribe(data => {
+      this.favorites = data;
+      console.log(this.favorites);
+    })
   }
 
 }

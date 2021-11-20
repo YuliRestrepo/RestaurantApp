@@ -1,12 +1,12 @@
 <div class="content">
     <h1>Mis favoritos</h1>
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 card-favorite" *ngFor="let food of favorites">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 card-favorite" *ngFor="let favorite of favorites">
             <mat-card>
                 <mat-card-content>
                     <div class="row">
                         <div class="col-4">
-                            <img src="{{ food.img }}">
+                            <img src="{{ favorite.img }}">
                         </div>
                         <div class="col info-favorite">
                             <div class="more">
@@ -14,8 +14,9 @@
                                         <mat-icon class="icon-more">more_vert</mat-icon>
                                     </button>
                             </div>
-                            <p> {{ food.name }} </p>
-                            <p> $ {{ food.rate }} </p>
+                            <h2> {{ favorite.name }} </h2>
+                            <p> {{ favorite.type | titlecase}} </p>
+                            <p> {{ favorite.price }} </p>
                         </div>
                     </div>
 

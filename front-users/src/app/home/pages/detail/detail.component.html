@@ -14,7 +14,8 @@
             <button mat-button routerLink="/home">Volver</button>
           </div>
           <div class="col">
-            <button mat-button>Añadir a favoritos</button>
+            <button mat-button *ngIf="!isFavorito" (click)="addOrDelete()">Añadir a favoritos</button>
+            <button mat-button *ngIf="isFavorito" (click)="addOrDelete()">Eliminar de favoritos</button>
         </div>
     </div>
     <div class="row">
