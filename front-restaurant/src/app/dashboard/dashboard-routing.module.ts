@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { InfoComponent } from './components/info/info.component';
-import { UserComponent } from './components/user/user.component';
 import { WrapperComponent } from './components/wrapper/wrapper.component';
 
 const routes: Routes = [
@@ -11,22 +8,27 @@ const routes: Routes = [
     component: WrapperComponent,
     children: [
       {
-        path: 'dashboard',
-        component: DashboardComponent
+        path: 'dash',
+        loadChildren: () => import('../dash/dash.module').then( m => m.DashModule )
       },
       {
-        path: 'info',
-        component: InfoComponent
+        path: 'menu',
+        loadChildren: () => import('../menu/menu.module').then( m => m.MenuModule )
       },
       {
-        path: 'user',
-        component: UserComponent
+        path: 'orders',
+        loadChildren: () => import('../orders/orders.module').then( m => m.OrdersModule )
+      },
+      {
+        path: '**',
+        redirectTo: 'dash',
+        pathMatch: 'full'
       }
     ]
   },
   {
     path: '**',
-    redirectTo: '/dashboard',
+    redirectTo: 'dash',
     pathMatch: 'full'
   }
 ];
