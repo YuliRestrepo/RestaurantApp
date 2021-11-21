@@ -8,17 +8,21 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule )
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomeModule )
+    path: '',
+    loadChildren: () => import('./users/users.module').then(m => m.UsersModule)
   },
-  {
-    path: 'favorites',
-    loadChildren: () => import('./favorites/favorites.module').then( m => m.FavoritesModule )
-  },
-  {
-    path: 'reservations',
-    loadChildren: () => import('./reservations/reservations.module').then( m => m.ReservationsModule )
-  },
+  // {
+  //   path: 'home',
+  //   loadChildren: () => import('./home/home.module').then( m => m.HomeModule )
+  // },
+  // {
+  //   path: 'favorites',
+  //   loadChildren: () => import('./favorites/favorites.module').then( m => m.FavoritesModule )
+  // },
+  // {
+  //   path: 'reservations',
+  //   loadChildren: () => import('./reservations/reservations.module').then( m => m.ReservationsModule )
+  // },
   {
     path: '**',
     redirectTo: 'home'
