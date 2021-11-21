@@ -22,6 +22,11 @@
         <mat-icon mat-list-icon class="icon-color-white">supervisor_account</mat-icon>
         <span *ngIf="isExpanded" class="text-white">Pedidos</span>
       </mat-list-item>
+
+      <mat-list-item [routerLink]="'auth/login'">
+        <mat-icon mat-list-icon class="icon-color-white">supervisor_account</mat-icon>
+        <span *ngIf="isExpanded" class="text-white">Cerrar sesión</span>
+      </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
 
