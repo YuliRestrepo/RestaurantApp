@@ -21,4 +21,8 @@ export class DataService {
   public getJSONReservations(): Observable<any>{
     return this.http.get("./assets/reservations.json");
   }
+
+  public getJSONUsers(): Observable<any>{
+    return this.http.get("./assets/users.json");
+  }
 }

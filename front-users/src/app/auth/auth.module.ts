@@ -6,12 +6,14 @@ import { MaterialModule } from '../material/material.module';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { FormsModule } from '@angular/forms';
+import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    SnackBarComponent
   ],
   imports: [
     CommonModule,
