@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { DashRoutingModule } from './dash-routing.module';
 import { DashComponent } from './pages/dash/dash.component';
 import { MaterialModule } from '../material/material.module';
+import { DataTarjetComponent } from './components/data-tarjet/data-tarjet.component';
 
 
 @NgModule({
   declarations: [
-    DashComponent
+    DashComponent,
+    DataTarjetComponent
   ],
   imports: [
     CommonModule,

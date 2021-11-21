@@ -7,6 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashComponent implements OnInit {
 
+  tarjetData = [
+    {
+      name: "Clientes",
+      num: 20
+    },
+    {
+      name: "Reservas",
+      num: 30
+    },
+    {
+      name: "Clientes",
+      num: 110
+    }
+  ]
+
   now = new Date();
 
   constructor() { }
