@@ -5,6 +5,22 @@ mat-sidenav-container, mat-sidenav-content, mat-sidenav {
 mat-sidenav{
     width: 250px;
     padding: 20px;
+    background-color: #0F123F;
+}
+
+img{
+    width: 195px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.color-white{
+    color: white;
+}
+
+.color-white-text{
+    color: white;
+    font-size:large
 }
 
 .content-sinav{
@@ -12,14 +28,10 @@ mat-sidenav{
 }
 
 .mat-button{
-    width: 190px;
+    width: 220px;
     text-align: start;
 }
 
 .row{
     margin-top: 10px;
-}
-
-h1{
-    margin-top: 80px;
 }
