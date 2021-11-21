@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class=" col" *ngFor="let food of menuForType">
+            <div>
+              <mat-card>
+                <mat-card-content>
+                  <img src="{{ food.img }}">
+                  <p> {{ food.name }} </p>
+                  <p> {{ food.price }} </p>
+                  <!-- <p> {{ food.disponibility }} platos disponibles </p> -->
+                  <button mat-button [routerLink]="['/home/detail', {img: food.img, name: food.name, price: food.price, type: type}]">Ver más</button>
+                </mat-card-content>
+              </mat-card>
+            </div>
+      </div>
+    </div>
+  </div>

@@ -9,22 +9,36 @@
       </mat-list-item>
 
       <mat-list-item [routerLink]="'dash'">
-        <mat-icon mat-list-icon class="icon-color-white">home</mat-icon>
+        <mat-icon mat-list-icon class="icon-color-white">
+          <span class="material-icons-outlined"> analytics </span>
+        </mat-icon>
         <span *ngIf="isExpanded" class="text-white">Dashboard</span>
       </mat-list-item>
 
       <mat-list-item [routerLink]="'menu'">
-        <mat-icon mat-list-icon class="icon-color-white">important_devices</mat-icon>
+        <mat-icon mat-list-icon class="icon-color-white">
+          <span class="material-icons-outlined">
+            inventory_2
+            </span>
+        </mat-icon>
         <span *ngIf="isExpanded" class="text-white">Menu</span>
       </mat-list-item>
 
       <mat-list-item [routerLink]="'orders'">
-        <mat-icon mat-list-icon class="icon-color-white">supervisor_account</mat-icon>
+        <mat-icon mat-list-icon class="icon-color-white">
+          <span class="material-icons-outlined">
+            today
+            </span>
+        </mat-icon>
         <span *ngIf="isExpanded" class="text-white">Pedidos</span>
       </mat-list-item>
 
       <mat-list-item [routerLink]="'auth/login'">
-        <mat-icon mat-list-icon class="icon-color-white">supervisor_account</mat-icon>
+        <mat-icon mat-list-icon class="icon-color-white">
+          <span class="material-icons-outlined">
+            exit_to_app
+            </span>
+        </mat-icon>
         <span *ngIf="isExpanded" class="text-white">Cerrar sesión</span>
       </mat-list-item>
     </mat-nav-list>

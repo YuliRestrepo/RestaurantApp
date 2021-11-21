@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { MenuRoutingModule } from './menu-routing.module';
 import { MenuComponent } from './pages/menu/menu.component';
 import { MaterialModule } from '../material/material.module';
+import { TarjetMenuComponent } from './components/tarjet-menu/tarjet-menu.component';
 
 
 @NgModule({
   declarations: [
-    MenuComponent
+    MenuComponent,
+    TarjetMenuComponent
   ],
   imports: [
     CommonModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-menu',
@@ -8,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
 
   now = new Date();
+  categories: any;
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.dataService.getJSON().subscribe(data => {
+      let categoriesA = data.map((val: { type: any; }) => val.type);
+      this.categories = [...new Set(categoriesA)];
+    });
   }
 
 }

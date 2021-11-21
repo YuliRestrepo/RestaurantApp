@@ -10,6 +10,10 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
+  public getJSON(): Observable<any>{
+    return this.http.get("./assets/data.json");
+  }
+
   public getJSONUsers(): Observable<any>{
     return this.http.get("./assets/users.json");
   }
