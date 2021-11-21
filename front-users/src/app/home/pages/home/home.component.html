@@ -5,7 +5,7 @@
         <input matInput>
     </mat-form-field>
     <mat-tab-group mat-align-tabs="start">
-        <mat-tab label={{tab}} *ngFor="let tab of categories">
+        <mat-tab label="{{tab | titlecase}}" *ngFor="let tab of categories">
             <div class="content-tab">
                 <h2>{{ tab | titlecase }}</h2>
                 <div class="menu">

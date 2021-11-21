@@ -10,7 +10,6 @@ import * as _ from 'lodash';
 export class HomeComponent implements OnInit {
 
   categories: any;
-  // menu: any;
 
   constructor(private dataService: DataService) { }
 
