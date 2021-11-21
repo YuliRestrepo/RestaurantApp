@@ -18,4 +18,8 @@ export class DataService {
     return this.http.get("./assets/users.json");
   }
 
+  public getJSONReservations(): Observable<any>{
+    return this.http.get("./assets/reservations.json");
+  }
+
 }
