@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col" *ngFor="let food of menuForType">
+      <div>
+        <mat-card>
+          <mat-card-content>
+            <div class="more">
+              <button mat-icon-button [matMenuTriggerFor]="menu" class="button-menu">
+                <mat-icon class="icon-more">more_vert</mat-icon>
+              </button>
+            </div>
+            <img src="{{ food.img }}">
+            <p> {{ food.name }} </p>
+            <p> {{ food.price }} </p>
+            <!-- <p> {{ food.disponibility }} platos disponibles </p> -->
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item color="warn">
+                <mat-icon class="delete">
+                  <span class="material-icons-outlined">
+                    delete
+                  </span>
+                </mat-icon>
+                <span class="delete">Eliminar</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>
+                  <span class="material-icons-outlined">
+                    edit
+                  </span>
+                </mat-icon>
+                <span>Editar</span>
+              </button>
+            </mat-menu>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

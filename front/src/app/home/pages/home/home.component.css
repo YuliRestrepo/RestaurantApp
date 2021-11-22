@@ -1,0 +1,27 @@
+.content{
+    padding: 15px;
+}
+
+h2{
+    margin-top: 20px;
+}
+
+mat-form-field{
+    width: 97%;
+    padding: 0%, 0%, 0%, 0%;
+    margin-top: 20px;
+}
+
+.content-tab{
+    margin: 10px;
+}
+
+.img-name{
+    margin-top: 25px;
+    width: 270px;
+}
+
+.mat-icon-button{
+    padding: 0%;
+    width: 1em;
+}

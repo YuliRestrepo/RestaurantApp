@@ -1,0 +1,41 @@
+mat-sidenav-container {
+  height: 100%;
+
+  mat-sidenav {
+    background-color: #0F123F;
+    .icon-color-white{
+      color: white;
+    }
+
+    .logo-completo{
+      width: 140px;
+    }
+    
+    .logo-ra{
+      width: 30px;
+      margin-right: 12px;
+    }
+
+    .text-white{
+      font-size: 17px;
+      color: white;
+      padding: 10px;
+      padding-right: 50px;
+    }
+
+    mat-nav-list {
+
+      .chevron-button {
+        transition: 300ms ease-in-out;
+        transform: rotate(0deg);
+        right: 0;
+        float: right;
+        position: absolute;
+      }
+
+      .chevron-button.rotated {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

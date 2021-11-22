@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="image">
+            <img src="{{img}}">
+        </div>
+    </div>
+    <div class="row">
+        <h2>{{name}}</h2>
+        <h3>{{type | titlecase}}</h3>
+        <h4>{{price}}</h4>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, iusto alias. At sit, in id eveniet ut ab suscipit iure placeat quas nihil incidunt a voluptates! Non fugiat vel aut!</p> -->
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <button mat-raised-button routerLink="/home"><p class="text-white">Volver</p></button>
+        </div>
+        <div class="col-6">
+            <button mat-raised-button *ngIf="add" (click)="addButton()"><p class="text-white">Añadir a favoritos</p></button>
+            <button mat-raised-button *ngIf="!add" (click)="deleteButton()"><p class="text-white">Eliminar de favoritos</p></button>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-12">
+            <button mat-raised-button *ngIf="reservation" (click)="addReservation()"><p class="text-white">Añadir a reservación</p></button>
+            <button mat-raised-button *ngIf="!reservation" (click)="deleteReservation()"><p class="text-white">Eliminar de reservación</p></button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<mat-toolbar>
+    <div class="row toolbar-text">
+        <div class="row">
+            <div class="col">
+                <h2>Menú</h2>
+            </div>
+            <div class="col">
+                <p class="date">{{ now | date:'fullDate'}}</p>
+            </div>
+        </div>
+    </div>
+</mat-toolbar>
+<div class="content">
+    <mat-tab-group mat-align-tabs="start">
+        <mat-tab label="{{tab | titlecase}}" *ngFor="let tab of categories">
+            <div class="content-tab">
+                <div class="row row-principal">
+                    <div class="col">
+                        <h2>{{ tab | titlecase }}</h2>
+                    </div>
+                    <div class="col button-more">
+                        <button mat-raised-button class="button-more-color">
+                            <mat-icon class="icon-white">
+                                <span class="material-icons-outlined icon-white">
+                                    add_circle_outline
+                                </span>
+                            </mat-icon>
+                            <span class="text-white">Añadir nuevo plato</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="menu">
+                    <app-tarjet-menu [type]="tab"></app-tarjet-menu>
+                </div>
+            </div>
+        </mat-tab>
+      </mat-tab-group>
+</div>

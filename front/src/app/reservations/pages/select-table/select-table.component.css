@@ -1,0 +1,23 @@
+.select-table{
+    padding: 15px;
+}
+
+.back-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+}
+
+app-mini-card-table{
+    margin: 10px;
+}
+
+.button-save{
+    margin: 5px;
+}
+
+.button-back{
+    margin: 5px;
+}

@@ -1,0 +1,14 @@
+img{
+    height: 90px;
+    width: 90px;
+    border-radius: 100%;
+}
+
+.col-4{
+    display: flex;
+    justify-content: center;
+}
+
+mat-card{
+    margin: 10px;
+}

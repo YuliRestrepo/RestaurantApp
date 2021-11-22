@@ -1,0 +1,52 @@
+<div class="title-text">
+  <h1>Reservaciones</h1>
+  <p>A continuación puedes realizar tu reservación con todo lo que desees</p>
+</div>
+
+<mat-stepper
+  class="example-stepper"
+  [orientation]="(stepperOrientation | async)!">
+  <mat-step [stepControl]="firstFormGroup" label="Fecha de reservación">
+    <form [formGroup]="firstFormGroup">
+      <mat-form-field appearance="fill">
+        <mat-label>Selecciona una fecha</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext>Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup" label="Selecciona plato">
+    <form [formGroup]="secondFormGroup">
+      <app-mini-card [id]="id"></app-mini-card>
+      <div class="button-two">
+        <button mat-button routerLink="/user/reservations/new-reservation/more-dish">Elegir más platos</button>
+        <button mat-button matStepperPrevious>Anterior</button>
+        <button mat-button matStepperNext>Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="thirdFormGroup" label="Selecciona mesa">
+    <form [formGroup]="thirdFormGroup">
+      <mat-selection-list #shoes [multiple]="false">
+        <app-mini-card-table [table]="4" [num]="4"></app-mini-card-table>
+      </mat-selection-list>
+      <div class="button-two">
+        <button mat-button routerLink="/user/reservations/new-reservation/more-table">Elegir otra mesa</button>
+        <button mat-button matStepperPrevious>Anterior</button>
+        <button mat-button matStepperNext>Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Listo</ng-template>
+    <p>Presiona enviar para realizar tu reservación.</p>
+    <div>
+      <button mat-button matStepperPrevious>Anterior</button>
+      <button mat-button (click)="openDialog()">Enviar</button>
+    </div>
+  </mat-step>
+</mat-stepper>
