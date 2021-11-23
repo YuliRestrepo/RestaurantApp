@@ -7,7 +7,7 @@
             <p> {{ food.name }} </p>
             <p> {{ food.price }} </p>
             <!-- <p> {{ food.disponibility }} platos disponibles </p> -->
-            <button mat-button [routerLink]="['/home/detail', {img: food.img, name: food.name, price: food.price, type: type}]">Ver más</button>
+            <button mat-button [routerLink]="['/user/home/detail', {img: food.img, name: food.name, price: food.price, type: type}]">Ver más</button>
           </mat-card-content>
         </mat-card>
     </div>

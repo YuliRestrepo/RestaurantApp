@@ -5,7 +5,7 @@ import { DashRoutingModule } from './dash-routing.module';
 import { DashComponent } from './pages/dash/dash.component';
 import { MaterialModule } from '../material/material.module';
 import { DataTarjetComponent } from './components/data-tarjet/data-tarjet.component';
-
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import { DataTarjetComponent } from './components/data-tarjet/data-tarjet.compon
   imports: [
     CommonModule,
     DashRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ChartsModule
   ]
 })
 export class DashModule { }

@@ -11,10 +11,15 @@ mat-toolbar{
     height: max-content;
 }
 
-.date{
+.date {
     font-size: small;
 }
 
-h4{
+h4 {
     margin-top: 5px;
+}
+
+.r2 {
+    /* background-color: aqua; */
+    margin-top: 20px;
 }

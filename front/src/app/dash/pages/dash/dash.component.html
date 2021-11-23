@@ -2,7 +2,7 @@
     <div class="row toolbar-text">
         <div class="row">
             <div class="col">
-                <h4>Dashboard</h4>
+                <h4> Dashboard </h4>
             </div>
             <div class="col">
                 <p class="date">{{ now | date:'fullDate'}}</p>
@@ -10,6 +10,8 @@
         </div>
     </div>
 </mat-toolbar>
+
+
 <div class="content">
     <div class="row">
         <div class="col-4" *ngFor="let tarjet of tarjetData">
@@ -19,19 +21,51 @@
     <br>
     <div class="row">
         <div class="col-8">
-            <mat-card></mat-card>
+            <mat-card style="height: 450px;">
+                <div style="display: block;">
+                    <canvas baseChart [datasets]="barChartData3" [labels]="barChartLabels3" [options]="barChartOptions3"
+                        [legend]="barChartLegend3" [chartType]="barChartType3">
+                    </canvas>
+                </div>
+            </mat-card>
         </div>
-        <div class="col">
-            <mat-card></mat-card>
+
+        <div class="col-4">
+            <mat-card>
+                <canvas baseChart style="width: 100%;" [data]="pieChartData" [labels]="pieChartLabels"
+                    [chartType]="pieChartType" [options]="pieChartOptions" [legend]="pieChartLegend">
+                </canvas>
+            </mat-card>
+            <br>
+            <mat-card>
+                <div>
+                    <canvas baseChart style="width: 10%;" [data]="pieChartData5" [labels]="pieChartLabels5"
+                        [chartType]="pieChartType5" [options]="pieChartOptions5" [legend]="pieChartLegend5">
+                    </canvas>
+                </div>
+            </mat-card>
         </div>
     </div>
     <br>
-    <div class="row">
-        <div class="col-7">
-            <mat-card></mat-card>
+    <div class="row r2">
+        <div class="col-6">
+            <mat-card>
+                <div class="col">
+                    <canvas baseChart style="width: 10%;" [datasets]="barChartData" [labels]="barChartLabels"
+                        [options]="barChartOptions" [plugins]="barChartPlugins" [legend]="barChartLegend"
+                        [chartType]="barChartType">
+                    </canvas>
+                </div>
+            </mat-card>
         </div>
-        <div class="col">
-            <mat-card></mat-card>
+
+        <div class="col-6">
+            <mat-card>
+                <canvas baseChart style="width: 100%;" [datasets]="barChartData4" [labels]="barChartLabels4"
+                    [options]="barChartOptions4" [legend]="barChartLegend4" [chartType]="'line'">
+                </canvas>
+            </mat-card>
         </div>
+
     </div>
 </div>
